@@ -1,0 +1,29 @@
+CREATE TABLE realestate (
+    id BIG INT NOT NULL AUTO_INCREMENT,
+    address VARCHAR(250) NOT NULL,
+    num_of_bedrooms int UNSIGNED NOT NULL,
+    num_of_bathrooms int UNSIGNED NOT NULL,
+    price int NOT NULL
+
+    PRIMARY KEY(id)
+    );
+
+
+@Entity
+@Table(name="properties")
+public class Property {
+    @Id @GeneratedValue
+    private long id;
+
+    @Column(nullable = false)
+    private String address;
+
+    @Column(nullable = false name="num_of_bedrooms")
+    private int numOfBedrooms;
+
+    @Column(nullable = false, name="num_of_bathrooms")
+    private int numOfBathrooms;
+
+    @Column(nullable = false)
+    private double price;
+}

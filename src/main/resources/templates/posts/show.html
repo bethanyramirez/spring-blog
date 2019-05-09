@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <th:block th:replace="fragments/head :: header('home')"/>
+</head>
+<body>
+    <th:block th:replace="fragments/navbar :: navbar"/>
+
+        <h1 th:text="${post.title}"></h1>
+        <h1 th:text="${post.body}"></h1>
+        <!--<h1 th:text="${post.author.email}"></h1>-->
+
+
+</body>
+</html>
